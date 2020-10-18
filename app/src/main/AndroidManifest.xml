@@ -8,7 +8,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".TabProfile"></activity>
+        <activity android:name=".ListViewActivity" />
         <activity android:name=".ForgetPass" />
         <activity android:name=".SignUp" />
         <activity android:name=".MainActivity">

@@ -2,15 +2,16 @@ package com.example.uteapp;
 
 public class ListViewBean {
     int image;
-    String langName;
+    String langName, setting_info;
 
     public ListViewBean(){
 
     }
 
-    public ListViewBean(int image, String langName) {
+    public ListViewBean(int image, String langName, String setting_info) {
         this.image = image;
         this.langName = langName;
+        this.setting_info = setting_info;
     }
 
     public int getImage() {
@@ -27,5 +28,13 @@ public class ListViewBean {
 
     public void setLangName(String langName) {
         this.langName = langName;
+    }
+
+    public String getSetting_info() {
+        return setting_info;
+    }
+
+    public void setSetting_info(String setting_info) {
+        this.setting_info = setting_info;
     }
 }

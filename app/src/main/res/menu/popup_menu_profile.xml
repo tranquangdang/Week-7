@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/change_pass"
+        android:title="Đổi mật khẩu"/>
+
+    <item
+        android:id="@+id/change_info"
+        android:title="Cập nhật thông tin cá nhân"/>
+
+    <item
+        android:id="@+id/change_avatar"
+        android:title="Cập nhật ảnh đại diện"/>
+
+    <item
+        android:id="@+id/feedback"
+        android:title="Đóng góp ý kiến"/>
+
+    <item
+        android:id="@+id/scholarship"
+        android:title="Thông tin học bổng"/>
+
+    <item
+        android:id="@+id/logout"
+        android:title="Đăng xuất"/>
+</menu>
