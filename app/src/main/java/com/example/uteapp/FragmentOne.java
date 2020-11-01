@@ -9,15 +9,17 @@ import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
 public class FragmentOne extends Fragment {
-    ListView lv;
-    ListViewBaseAdapter_Profile adapter;
-    ArrayList<ListViewBean_Profile> arr;
+    RecyclerAdapter_Profile adapter;
+    RecyclerView mRecyclerView;
+    ArrayList<RecycleView_Profile> arr;
 
     public static FragmentOne newInstance() {
         return new FragmentOne();
@@ -26,16 +28,21 @@ public class FragmentOne extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_one, container, false);
-        lv = (ListView) view.findViewById(R.id.listview_profile);
-        arr = new ArrayList<ListViewBean_Profile>();
-        arr.add(new ListViewBean_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
-        arr.add(new ListViewBean_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
-        arr.add(new ListViewBean_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
-        arr.add(new ListViewBean_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
-        arr.add(new ListViewBean_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
-        adapter = new ListViewBaseAdapter_Profile(arr,getContext());
-        lv.setAdapter(adapter);
+        mRecyclerView = view.findViewById(R.id.recycler_profile);
+        arr = new ArrayList<RecycleView_Profile>();
+        arr.add(new RecycleView_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
+        arr.add(new RecycleView_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
+        arr.add(new RecycleView_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
+        arr.add(new RecycleView_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
+        arr.add(new RecycleView_Profile(R.drawable.grey_test, "Thông báo", "Trường Đại học Sư Phạm Kĩ Thuật thông báo đến em Trần Quang Đăng về việc nộp chập học phí kì I niên khóa 2020-2021...", "yesterday 10:13 PM"));
+        adapter = new RecyclerAdapter_Profile(getContext(),arr);
+        mRecyclerView.setAdapter(adapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         return view;
     }
+
+
 }

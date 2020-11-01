@@ -1,14 +1,14 @@
 package com.example.uteapp;
 
-public class ListViewBean_Profile {
+public class RecycleView_Profile {
     int image;
     String header, content, time;
 
-    public ListViewBean_Profile(){
+    public RecycleView_Profile(){
 
     }
 
-    public ListViewBean_Profile(int image, String header, String content, String time) {
+    public RecycleView_Profile(int image, String header, String content, String time) {
         this.image = image;
         this.header = header;
         this.content = content;

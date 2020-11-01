@@ -1,3 +1,4 @@
 <resources>
     <string name="forgetPass"><u>Quên mật khẩu?</u></string>
+    <string name="app_name">UTE</string>
 </resources>
